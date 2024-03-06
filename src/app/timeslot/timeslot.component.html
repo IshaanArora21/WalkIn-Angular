@@ -1,0 +1,38 @@
+<div class="mainComponent">
+    <div class="timeSlotContainer">
+      <h1>Time Slots & Preferences</h1>
+  
+      <div class="radioContainer">
+        <span class="radioContainerLabel">Select a Time Slot :</span>
+  
+        <div class="radioContainerOptions">
+          <div *ngFor="let slot of driveDetails.time_Slots; let i = index" class="singleRadioContainer">
+            <input type="radio" name="timeSlot" [value]="slot.id" (change)="handleTimeSlotChange($event)" />
+            <label>{{ slot.slot_timings }}</label>
+          </div>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="technologiesContainer">
+        <span class="technologiesContainerLabel">Select Your Preference :</span>
+  
+        <div *ngFor="let role of driveDetails.job_Roles; let i = index" class="singleCheckboxContainer">
+          <input type="checkbox" [id]="'checkbox_job_role_' + i" [value]="role.id" (change)="handleJobRoleChange($event)" />
+          <label [for]="'checkbox_job_role_' + i">{{ role.job_title }}</label>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="uploadResumeContainer">
+        <label class="inputFileLabel" for="input_file">
+          <img src="/assets/icons/Upload_green_24dp.svg" alt="Upload Resume icon" />
+          Upload Resume
+        </label>
+        <input type="file" accept=".pdf" id="input_file" style="display: none" (change)="handleFileChange($event)" />
+      </div>
+    </div>
+  </div>
+  

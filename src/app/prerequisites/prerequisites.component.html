@@ -1,0 +1,53 @@
+<div class="mainComponent">
+    <div class="dropDown" (click)="togglePrerequisites()">
+      <span>Pre-requisites & Application Process</span>
+      <div>
+        <img src="../../assets/icons/expand_less_black_24dp.svg" *ngIf="showPrerequisites" alt="expand less/more icon">
+        <img src="../../assets/icons/arrow-down.svg" *ngIf="!showPrerequisites" alt="expand less/more icon">
+      </div>
+    </div>
+  
+    <div class="singleJobContainer" *ngIf="showPrerequisites">
+      <div class="jobContainerInfo">
+        <div class="jobInfo">
+          <div class="jobHeader">General Instructions :</div>
+          <div class="jobValue">
+            <div>
+              <div *ngFor="let sentence of driveDetails.general_instructions.split('. '); let i = index">-{{ sentence.trim() }}.</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+  
+        <div class="jobInfo">
+          <div class="jobHeader">Instructions for the Exam :</div>
+          <div class="jobValue">
+            <div>
+              <div *ngFor="let sentence of driveDetails.instructions_for_exam.split('. '); let i = index">-{{ sentence.trim() }}.</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+  
+        <div class="jobInfo">
+          <div class="jobHeader">Minimum System Requirements :</div>
+          <div class="jobValue">
+            <div>
+              <div *ngFor="let sentence of driveDetails.minimum_system_requirements.split('. '); let i = index">-{{ sentence.trim() }}.</div>
+            </div>
+          </div>
+        </div>
+        <hr />
+  
+        <div class="jobInfo">
+          <div class="jobHeader">Process :</div>
+          <div class="jobValue">
+            <div>
+              <div *ngFor="let sentence of driveDetails.process.split('. '); let i = index">-{{ sentence.trim() }}.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

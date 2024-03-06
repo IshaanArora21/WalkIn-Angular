@@ -1,0 +1,172 @@
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../../assets/Quicksand\ font\ 1/Quicksand-VariableFont_wght.ttf') format('woff2');
+}
+.mainComponent{
+    background-color: rgba(238, 238, 238, 1);
+    padding: 35px 24px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-family: 'Quicksand';
+.timeSlotContainer {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 35px 24px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.24);
+    margin-top: 24px; 
+
+    > h1 {
+        margin: 0px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .radioContainer {
+        .radioContainerLabel {
+            font-size: 12px;
+            color: rgba(102, 102, 102, 1);
+            padding-bottom: 12px;
+        }
+
+        .radioContainerOptions {
+            margin-top: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+            flex-direction: column;
+            gap: 16px;
+
+            .singleRadioContainer {
+                display: flex;
+                justify-content: normal;
+                align-items: center;
+                gap: 8px;
+
+                input[type="radio"] {
+                    width: 20px;
+                    height: 24px;
+                    accent-color: rgba(31, 122, 84, 1);
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+    hr {
+        margin: 16px 0px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .technologiesContainer {
+        display: flex;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: column;
+        gap: 16px;
+
+        .technologiesContainerLabel {
+            font-size: 12px;
+            color: rgba(102, 102, 102, 1);
+        }
+
+        .singleCheckboxContainer {
+            display: flex;
+            justify-content: normal;
+            align-items: center;
+            gap: 9px;
+            input[type="checkbox"] {
+                background-color: black;
+                padding: 10px;
+                width: 18px;
+                height: 24px;
+                margin: 0px;
+                accent-color: rgba(31, 122, 84, 1);
+            }
+            label{
+                display: inline-block;
+            }
+        }
+    }
+
+    .uploadResumeContainer {
+        span {
+            color: rgba(31, 122, 84, 1);
+            font-size: 14px;
+        }
+
+        .inputFileLabel {
+            display: flex;
+            justify-content: normal;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            color: rgba(31, 122, 84, 1);
+        }
+
+        #inputFile {
+            display: none;
+        }
+
+        #inputFile::-webkit-file-upload-button {
+            background-color: rgba(255, 255, 255, 1);
+            border: none;
+        }
+    }
+}
+}
+@media screen and (max-width: 376px) {
+	.mainContainer {
+		padding-bottom: 76px;
+		overflow-y: hidden;
+
+		.goUpComponent {
+			bottom: 48px;
+		}
+
+		.listContainer {
+			.jobContainer {
+				.jobRoleContainer {
+					display: flex;
+					justify-content: center;
+					align-items: normal;
+					flex-direction: column;
+				}
+
+				.applyInJob {
+					position: fixed;
+					top: auto;
+					bottom: 0px;
+					left: 0px;
+					color: rgba(209, 1, 7, 1);
+					font-size: 12px;
+					border-radius: 2px;
+					width: 100vw;
+					overflow: hidden;
+
+					.applyButton {
+						cursor: pointer;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: rgba(63, 210, 139, 1);
+						;
+						color: rgba(37, 49, 63, 1);
+						;
+						width: 100vw;
+						height: 28px;
+						border: 0px;
+						box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
+						border-radius: 2px;
+						font-family: 'Quicksand';
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.screenMobile {
+			display: none;
+		}
+	}
+}

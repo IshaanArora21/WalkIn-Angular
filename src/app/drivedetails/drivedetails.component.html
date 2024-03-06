@@ -1,0 +1,9 @@
+<div *ngIf="driveDetails">
+    <app-walkincard [driveDetails]="driveDetails" [drive]="false"></app-walkincard>
+    <app-prerequisites [driveDetails]="driveDetails"></app-prerequisites>
+    <app-timeslot [driveDetails]="driveDetails"></app-timeslot>
+    <div *ngFor="let jobDetails of driveDetails.job_Roles">
+      <app-jobdetails [jobDetails]="jobDetails"></app-jobdetails>
+    </div>
+  </div>
+  

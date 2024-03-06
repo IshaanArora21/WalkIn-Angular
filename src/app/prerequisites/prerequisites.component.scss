@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'Quicksand';
+	src: url('../../assets/Quicksand\ font\ 1/Quicksand-VariableFont_wght.ttf') format('woff2');
+}
+.mainComponent{
+	background-color: rgba(238, 238, 238, 1);
+	padding: 0px 24px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+    font-family: 'Quicksand';
+.dropDown {
+    background-color: rgba(219, 239, 255, 1);
+    cursor: pointer;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > span {
+        margin-left: 16px;
+    }
+
+    .dd_img_container {
+        height: 56px;
+        width: 32px;
+        border-left: 2px solid rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.singleJobContainer {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.16);
+
+    .jobContainerInfo {
+        background-color: rgba(255, 255, 255, 1);
+        padding: 16px;
+        overflow: hidden;
+
+        .jobInfo {
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+            flex-direction: column;
+            gap: 16px;
+
+            .jobHeader {
+                color: rgba(102, 102, 102, 1);
+                font-size: 12px;
+                width: 480px;
+            }
+
+            .jobValue {
+                font-size: 14px;
+
+                div {
+                    line-height: 24.5px;
+                }
+            }
+        }
+
+        hr {
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            margin: 16px 0px;
+        }
+    }
+}
+}
+@media screen and (max-width: 376px) {
+	.mainContainer {
+		padding-bottom: 76px;
+		overflow-y: hidden;
+
+		.goUpComponent {
+			bottom: 48px;
+		}
+
+		.listContainer {
+			.jobContainer {
+				.jobRoleContainer {
+					display: flex;
+					justify-content: center;
+					align-items: normal;
+					flex-direction: column;
+				}
+
+				.applyInJob {
+					position: fixed;
+					top: auto;
+					bottom: 0px;
+					left: 0px;
+					color: rgba(209, 1, 7, 1);
+					font-size: 12px;
+					border-radius: 2px;
+					width: 100vw;
+					overflow: hidden;
+
+					.applyButton {
+						cursor: pointer;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: rgba(63, 210, 139, 1);
+						;
+						color: rgba(37, 49, 63, 1);
+						;
+						width: 100vw;
+						height: 28px;
+						border: 0px;
+						box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.24);
+						border-radius: 2px;
+						font-family: 'Quicksand';
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.screenMobile {
+			display: none;
+		}
+	}
+}

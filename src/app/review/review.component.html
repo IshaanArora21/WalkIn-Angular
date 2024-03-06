@@ -1,0 +1,49 @@
+<div class="mainComponent">
+    <div class="hallTicketComponent">
+      <img src="../../assets/icons/correct_green.png" alt="correct icon" />
+      <h1>
+        Congratulations! You have successfully applied for the walk-in opportunity
+      </h1>
+  
+      <hr />
+  
+      <div class="subComponent">
+        <div class="componentTitle">Date & Time of Walk-In :</div>
+        <div class="componentValue">
+          <div>{{ (reviewData.start_date) }}</div>
+          <div>{{ reviewData.slot_timings }}</div>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="subComponent">
+        <div class="componentTitle">Venue of Walk-In :</div>
+        <div class="addressValue">
+          <div>{{ reviewData.company_name }}</div>
+          <div>{{ reviewData.address_line_1 }}</div>
+          <div>{{ reviewData.area }}</div>
+          <div>{{ reviewData.city }} - {{ reviewData.pincode }}</div>
+          <div>+{{ reviewData.phone }}</div>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="subComponent">
+        <div class="componentTitle">THINGS TO REMEMBER :</div>
+        <div class="componentValue">
+          <div *ngIf="reviewData.things_to_remember">
+            <div *ngFor="let sentence of reviewData.things_to_remember.split('.'); let i = index">
+              - {{ sentence.trim() }}.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <button class="downloadHallTicket">DOWNLOAD HALL TICKET</button>
+    </div>
+  </div>
+  

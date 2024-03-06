@@ -1,0 +1,46 @@
+<div  class="listContainer">
+    <div class="jobContainer">
+      <h1>{{ driveDetails.drive_title }}</h1>
+  
+      <div  class="expiresInJob">
+        Expires in {{ driveDetails.expiry }} days
+      </div>
+  
+      <div  class="applyInJob" *ngIf="!drive">
+        <button class="applyButton" (click)="handleApply()">APPLY</button>
+      </div>
+  
+      <div class="dateTimeContainer">
+        <span>Date & Time :</span>
+        <div class="dateTimeValue">
+          <div>{{ driveDetails.start_date }} to {{ driveDetails.end_date }}</div>
+          <div class="splitter"></div>
+          <div class="location">
+            <img src="../../assets/icons/location_on_grey_24dp.svg" alt="location icon" />
+            <span>{{ driveDetails.location }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <hr />
+  
+      <div class="jobRoleTitle">Job Roles :</div>
+  
+      <div class="jobRoleContainer">
+        <div  class="singleJob" *ngFor="let job_role of driveDetails.job_Roles; let i = index">
+          <img src="../../assets/icons/Instructional Designer.svg" alt="Instructional Designer icon" />
+          <span>{{ job_role.job_title }}</span>
+        </div>
+        <div class="jobSplitter"></div>
+      </div>
+  
+      <div class="extraRolesContainer">
+        <span class="extraRoles">Extra role</span>
+      </div>
+  
+      <a style="text-decoration: none; font-weight: 600;" *ngIf="drive">
+        <button   (click)="handleClick()"class="moreDetailsButton">VIEW MORE DETAILS</button>
+      </a>
+    </div>
+  </div>
+  

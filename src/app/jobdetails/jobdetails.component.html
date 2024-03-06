@@ -1,0 +1,31 @@
+<div class="mainComponent">
+    <div class="singleJobContainer">
+      <div class="dropDown" (click)="toggleJobDesc()">
+        <span>{{ jobDetails.job_title }}</span>
+        <div>
+          <img src="../../assets/icons/expand_less_black_24dp.svg" *ngIf="showJobDesc" alt="expand less/more icon"  />
+          <img src="../../assets/icons/arrow-down.svg" *ngIf="!showJobDesc" alt="expand less/more icon" />
+        </div>
+      </div>
+  
+      <div class="jobContainerInfo" [ngStyle]="{ 'display': showJobDesc ? 'block' : 'none' }">
+        <div class="jobInfo">
+          <div class="jobHeader">gross compensation package :</div>
+          <div class="jobValue">Rs. {{jobDetails.package }} lpa</div>
+        </div>
+        <hr />
+  
+        <div class="jobInfo">
+          <div class="jobHeader">Role Description :</div>
+          <div class="jobValue">{{ jobDetails.job_description}}</div>
+        </div>
+        <hr />
+  
+        <div class="jobInfo">
+          <div class="jobHeader">Requirements :</div>
+          <div class="jobValue">{{ jobDetails.job_requirements}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
